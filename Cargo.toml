@@ -1,0 +1,17 @@
+[package]
+name = "noir_bignum"
+version = "0.1.0"
+edition = "2021"
+license = "MIT or Apache-2.0"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+console_error_panic_hook = "0.1.7"
+js-sys = "0.3.70"
+noir-bignum-paramgen = "0.1.3"
+wasm-bindgen = "0.2.93"
+web-sys = { version = "0.3.70", features = ["Request", "Window", "Response"] }
+num-bigint = { version = "0.8.2", features = ["i128", "prime", "zeroize"], default-features = false, package = "num-bigint-dig" }
+hex = "0.4.3"
