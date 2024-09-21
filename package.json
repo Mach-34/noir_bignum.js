@@ -1,0 +1,31 @@
+{
+  "name": "@mach-34/noir-bignum-paramgen",
+  "version": "1.0.2",
+  "main": "dist",
+  "types": "dist",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "compileWasm": "cd wasm && wasm-pack build --target nodejs && cd ..",
+    "prepublishOnly": "yarn build"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.13",
+    "@types/node": "^22.5.5",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2",
+    "noir_bignum": "file:./wasm/pkg"
+  },
+  "files": [
+    "dist/**/**",
+    "docs/**/**",
+    "!**/*.spec.*",
+    "!**/*.json",
+    "!**/*.tsbuildinfo",
+    "LICENSE",
+    "README.md"
+  ]
+}
