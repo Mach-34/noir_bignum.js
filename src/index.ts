@@ -10,7 +10,8 @@ export function computeBarrettReductionParameter(modulus: bigint): bigint {
     const k = modulus.toString(2).length; // Number of bits in the binary representation
 
     // multiplicand = 2^(2 * k)
-    const multiplicand = BigInt(1) << (2n * BigInt(k));
+    const overflowBits = 4n;
+    const multiplicand = BigInt(1) << (2n * BigInt(k) + overflowBits);
 
     // Compute the Barrett reduction parameter
     const barrettReductionParameter = multiplicand / modulus;
