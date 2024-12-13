@@ -107,6 +107,6 @@ export function bnToLimbStrArray(input: bigint | string, numBits?: number): stri
  * @returns - An array of strings, each representing a 120-bit limb in "0x..." hexadecimal format
  */
 export function bnToRedcLimbStrArray(bn: bigint | string, numBits?: number): string[] {
-    let redc = computeBarrettReductionParameter(bn);
+    let redc = computeBarrettReductionParameter(bn, numBits);
     return bnToLimbStrArray(redc);
 }

@@ -1,6 +1,6 @@
 {
   "name": "@mach-34/noir-bignum-paramgen",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "main": "dist",
   "types": "dist",
   "license": "MIT",
